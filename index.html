@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/indexRightbar.css">
+	<link rel="stylesheet" href="./css/indexFooter.css">
+	<link rel="stylesheet" href="./swiper-master/package/swiper-bundle.min.css">
+	<script src="./swiper-master/package/swiper-bundle.min.js"></script>
+	<script src="./js/ajax.js"></script>
+</head>
+<body>
+	<!-- 顶部导航栏 -->
+	<div id="topbar" class="topbar">
+		<div class="inner">
+			<div class="topnar-fl hover">
+				Hi，欢迎来到洋码头！
+			</div>
+			<ul class="nav topbar-fr">
+				<li class="nav-item">
+					<a href="./html/login.html"><span class="title hover">登录</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="./html/sign.html"><span class="title hover">注册</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="./html/shop.html"><span class="title hover">购物车</span></a>
+				</li>
+				<li class="nav-item">
+					<a href=""><span class="title hover">我的订单</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="" class="downmenu"><span class="title hover">个人中心</span>
+						<!--<i class="arrow-bt"></i>--></a>
+				</li>
+				<li class="nav-item">
+					<a href="" class="downmenu"><span class="title hover">规则&公告</span>
+					</a></li>
+				<li class="nav-item">
+					<a href=""><span class="title hover">帮助中心</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--右侧黑色条 -->
+	<div class="rightbar">
+        <ul class="rightbar-inner" style="padding: 270px 0 0;">
+            <li class="item user">
+                <a  target="_blank" title="我"><i class="rightbar-icon rti-user"></i></a>
+            </li>
+            <li class="item">
+                <a href="./html/shop.html" style="padding-bottom: 2px;" target="_blank" title="购物车">
+                    <i class="rightbar-icon rti-cart"></i><span class="title">购<br>物<br>车</span>
+
+                    <em class="tips" style="display: none;">1</em>
+
+                </a>
+            </li>
+            <li class="item" id="wenxinbox">
+                <a style="padding-bottom: 2px;" title="二维码"><i class="rightbar-icon rti-code"></i></a>
+                <div id="qrcodeContainer"
+                    style="display: none;position: absolute;top: 0;left: -102px;z-index: 1;width: 102px;height: 126px;background: #383838;">
+                    <img src="./images/weixin2d-new.png" title="洋码头二维码" style="width: 62px; height: 63px; display: block; margin: 10px auto;">
+                    <span>下载APP领取<br>260元新人礼包</span>
+                </div>
+            </li>
+            <li class="item">
+                <a style="padding-bottom: 2px;" href="javascript:void(0)"
+                    onclick="javascript:document.documentElement.scrollTop = document.body.scrollTop =0" title="置顶"><i
+                        class="rightbar-icon rti-top"></i><span class="title">TOP</span></a>
+            </li>
+        </ul>
+    </div>
+	<script src="./js/rightbar.js"></script>
+	<!-- 头部 -->
+	<div class="header global-wrap">
+
+		<div class=" inner">
+			<div class="mod-notice">
+				<div class="tips">公告提醒: </div>
+				<ul class="content" id="noticeContent">
+					<!-- <li>fashfsah</li>
+					<li>fashfsah</li>
+					<li>fashfsah</li>
+					<li>fashfsah</li> -->
+				</ul>
+			</div>
+			<script src="./js/topinteraction.js"></script>
+			<div class=" header-search clear_fix">
+				<h1 class="logo"><a href="" target="" title="首页"></a></h1>
+				<form class="search-wrap J_wrap-search" id="baidubox" action="/products">
+					<input id="word" class="input-search J_input-search" name="k" value>
+					<div class="search-recomend" id="p">
+						<!-- <dl>
+							<dt>最近搜索<i class="dust-btn"></i></dt>
+							<dd>RMK</dd>
+						</dl> -->
+					</div>
+					<button class="header-icon search-btn J_btn-search" type="submit"></button>
+				</form>
+				<script src="./js/indexsearch.js"></script>
+				<div class="qrapp"></div>
+			</div>
+
+			<div style="width: 100%; height: 1px ; overflow: hidden;"></div>
+			<div class="menu-nav">
+				<a href="" class="menu-item" id="index-tab" title="首页">首页</a>
+				<a href="" id="todaybuy-bt" class="menu-item" title="今日限时抢">今日限时抢</a>
+				<a href="" id="ymt-bt" class="menu-item" title="洋货集">洋货集</a>
+				<a href="" id="categoryMenu" title="分类" class="menu-item">分类 <i class="c-down"></i></a>
+				<div class="category-box">
+					<div class="category-downlist" style="display:none">
+						<div class="category-wrap">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 轮播图 -->
+	<div class="slideshow">
+		<div class="home-banners">
+			<!-- swiper-container -->
+			<div class="swiper-container" id="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-color: green;"><img class="img"
+							src="./images/CgzUIF8O-OCAX_YkAAFnmsmN5Gw049_3_1_o.jpeg" alt=""></div>
+					<div class="swiper-slide" style="background-color: #ccc;"><img class="img"
+							src="./images/CgzUIF8O-OCAX_YkAAFnmsmN5Gw049_3_1_o.jpeg" alt=""></div>
+					<div class="swiper-slide" style="background-color: orange;"><img class="img"
+							src="./images/CgzUIF8O-OCAX_YkAAFnmsmN5Gw049_3_1_o.jpeg" alt=""></div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+				<!-- 如果需要导航按钮 -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="sb-ft">
+				<div class="inner">
+					<span class="item"><i class="zhengpin-icon zhengpin1"></i><span class="title">海外正品</span></span>
+					<span class="item"><i class="zhengpin-icon zhengpin4"></i><span class="title">严格监管</span></span>
+					<span class="item"><i class="zhengpin-icon zhengpin2"></i><span class="title">买手认证</span></span>
+					<span class="item"><i class="zhengpin-icon zhengpin3"></i><span class="title">售后无忧</span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainer global-wrap">
+		<div class="inner">
+			<!-- 限时抢 -->
+			<div class="mod mod-today-buying" id="flashSale" module_name="xianshiqiang">
+				<!-- 今日限时抢Begin -->
+
+				<!-- 今日限时抢End -->
+			</div>
+			<!-- 全球必买清单 -->
+			<div class="mod mod-global-must-buy" module_name="special_topic_list">
+				<div class="mod-hd">
+					<i class="home-icon hi-must-buy"></i><span class="title">全球必买清单</span>
+					<a class="more" target="" sub_module_name="more" module_index title="更多">更多<i
+							class="home-icon hi-more"></i></a>
+				</div>
+				<div class="mod-bd">
+					<ul class="must-buy-list">
+						<li class="item" data-topicId="1004830" module_index>
+							<a title="做好
+							防晒，出街也要落落大方" href="./html/list.html" target="" _target="banner" subject_id="1004830">
+								<div class="mb-l must-buy-bg0">
+									<div class="mbl-fill">
+										<div class="fill">做好防晒，出街也要落落大方</div>
+										<div class="desc">
+											<span class="seller">来自 22 位买手</span>
+											<span>31 件商品</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="mb-r">
+								<ul class="product-list">
+									<!-- <li class="product-item" _target="product"
+										sproductid="26afd986-784e-4db4-9118-06fc091f1f42" subject_id="1004830">
+										<a title="cosme热卖款 2019花王碧柔aqua rich防晒啫喱乳霜90ml spf50+"
+											href="/product/26afd986-784e-4db4-9118-06fc091f1f42.html" target=""
+											class="product-img">
+											<img alt="cosme热卖款 2019花王碧柔aqua rich防晒啫喱乳霜90ml spf50+" class="lazy"
+												src="data:image/jpeg;base64,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"
+												data-src="images/CgzUFV6ecLKAVFVjAAULfT1d4qs373_1_1_n_w_l.jpeg">
+										</a>
+										<a href="/product/26afd986-784e-4db4-9118-06fc091f1f42.html" target=""
+											title="cosme热卖款 2019花王碧柔aqua rich防晒啫喱乳霜90ml spf50+">
+											<p class="name lineClamp2">cosme热卖款 2019花王碧柔aqua rich防晒啫喱乳霜90ml spf50+</p>
+										</a>
+										<p class="price"><em class="unit">¥</em>58</p>
+										<p class="country"><span class="country-sign"><img src="images/Japan.png"
+													alt="日本"></span><span class="country-name">日本</span></p>
+									</li> -->
+								</ul>
+							</div>
+						</li>
+						<li class="item" data-topicId="1004830" module_index>
+							<a title="做好防晒，出街也要落落大方" href="/home/topicInfo/1004830" target="" _target="banner"
+								subject_id="1004830">
+								<div class="mb-l must-buy-bg1">
+									<div class="mbl-fill">
+										<div class="fill">做好防晒，出街也要落落大方</div>
+										<div class="desc">
+											<span class="seller">来自 22 位买手</span>
+											<span>31 件商品</span>
+										</div>
+									</div>
+								</div>
+							</a>
+							<div class="mb-r">
+								<ul class="product-list">
+									<!-- <li class="product-item" _target="product"
+										sproductid="1c603fbe-d898-458e-bc16-48c05f340c6d" subject_id="1004830">
+										<a title="日本新版Biore碧柔防晒保湿防嗮霜防紫外线抗氧50g乳液"
+											href="/product/1c603fbe-d898-458e-bc16-48c05f340c6d.html" target=""
+											class="product-img">
+											<img alt="日本新版Biore碧柔防晒保湿防嗮霜防紫外线抗氧50g乳液" class="lazy"
+												src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEARwBHAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCADSANIDAREAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAMEBQIBBgj/xAA4EAABAwIEAwQIBQQDAAAAAAAAAQIDBBEFEiExE0FRIjJhcRQjNEKhscHRFXKBkeEkM1JzQ1PS/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AP1SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABHNM2JE0VznLZjE3VQKXp9TLJw2tbBqrUe7tork5X0AtU1Q56ujlTLNH3kTZb7KgE4AAAAAAAAAAAAAAAAAAAAAAAAAAAKUr/AOvc7lBCrk81/gCFqQ/hTWuka19s7VVbLmvdAOHYlTJNDOi3dlyzNRP1+CgTMxukXdHN80+wFqCspp3ZYn5nIl1Syp8wJgAAAAAAAAAAAAAAAAAAAAAAHMr8kT3/AOKKv7AYv4rXTPRkdmOctkRE+q3AqTPqeI/iuVH7PvoBFoB5oAuBewZbVqeLVQDfAAAAAAAAAAAAAAAAAAAAAAAQVy2o5vyL8UAwKH2yH86fMCTFUtXyeNl+CARtoqh9Px2JmZ0TfTwA9p6Gaoie+Oy5Pd5gcQ075Z2w2s5Vsvh1Auw0j6PEYUc5HZlW1t9UtsBqPraRjla6REcm6AR/ilHxWx575vf5IB4uL0KLbMv7KBw3GaVZsmqM/wCxeoF8CpNiVPDPwZLovN1tAFViUNPkVUztk1RzbATwTNmibK3uu2uBIAAAAAAAAAAAAACria2oZfL5qBg0ftcP+xvzAt4y3+tTlmamvwA7Z6RhiuunEhkTsqm2YD2lnpYHrLJI9kz09YzLpdf0Atsjhga+tWVzuI1LvVNddgKqSYcsjHpI98/EaudU8duSWA9xxsTcio1OI9VVXc9ALFBTUqRRo5rVnRqPX/LXVAKtNM+XE3M04WZ2lk2QCGma2bFtuznctvBNgN2RXNY5WpmciaN6gYzqmKuRIp04VQi2ZJy8lA4xWCOBIYmckVVXrcDUwz2GLy+oFoAAAAAAAAAAAAAFLF1tQv8AFU+YGJR+1w/7G/MC9jqevjd1bb9l/kDuidJPA10+lNT6/mVNr+QFfjUEznSVPE4rlXu2tbl8ANOf0b8NTPm4GVm3etpYDLmlw1IWpAx/Fat0cv1AYvOktWqJ3Y0y/cDrgJDivDYrlRmqde7fkB5RJVU0rpFppHqrVROyvP8AQCGCSejnSR0aovR6Kl0A3JKp6UzZ44XPV3/Hsv1Az0lelUtR6BJnXlra/XugVK2pfVzo7JlXuozcDQhrqqKJkaUUlmIic/8AyBPQVNZK97Z4VYm7XWt+moF0AAAAAAAAAAAAM/G1tRp4vT6gY1N7RF+dvzA08eT+y78yfICeWJZ8Ma2k0aqJ2fBN087gZ/Gw1uj6V2dNHdpd/wBwNOd9OmGo50d4crPV35aW1AzH1WH8B0bKZW5tUW/Pz1A9xNkaNp5Gtssjczl6rZAPVl42LcSBe93FXrk+4Fpz8Yb3nRtvtewGbW+ko9rJ3Z3Il0W99wPo40tG1OiIBnYniSRosMK3kXRzk5fyBWpcHklgV714bl/tp9wOW1lfRScOXtInuu6eCga1JXQVLewtnJuxdwLAAAAAAAAAAAAAUsVp5ZqdEjS+VcyonkBho/hPujLPavvarcDTxWRs9DDM3ZXfRfsBWosSWmp3x2zOVbs6eIFOSR8j1e9buduoGo6qSow9KWGN75MrGqqJp2bc/wBAIocEqHayuSNOm6/YC9UYW2ZkLOIqJE3LtuBImHU6VPpCXR3JqWy7W2AlnpoZ2ZZUunIDLiwSXi+scnDRfNVQDUqY3yQPYx2Rypo4CrSYTDCqPk9ZJ8EAvgQ1NLFUR5JE8l5oBDh+HtpWqq9qR3veAFwAAAAAAAAAAAAAFepoaeoTtt7XJ6bgZ02H1UdO+BqcViuRzFTrst0A4hwSodrK5I06br9gNCHCaOPdvEXq77bAW0RESyJZOiAegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q=="
+												data-src="images/CgzUF16EN9mADlgLAAHU7WvJxZQ526_1_1_n_w_l.jpeg">
+										</a>
+										<a href="/product/1c603fbe-d898-458e-bc16-48c05f340c6d.html" target=""
+											title="日本新版Biore碧柔防晒保湿防嗮霜防紫外线抗氧50g乳液">
+											<p class="name lineClamp2">日本新版Biore碧柔防晒保湿防嗮霜防紫外线抗氧50g乳液</p>
+										</a>
+										<p class="price"><em class="unit">¥</em>47</p>
+										<p class="country"><span class="country-sign"><img src="images/Japan.png"
+													alt="日本"></span><span class="country-name">日本</span></p>
+									</li>-->
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 洋货集 -->
+
+			<!-- 分类 -->
+			<div class="mod mod-category" module_name="classification_index">
+				<div class="mod-hd">
+
+					<i class="home-icon hi-category"></i><span class="title">分类</span>
+					<a class="more" target="" sub_module_name="more" module_index title="更多">更多<i
+							class="home-icon hi-more"></i></a>
+				</div>
+				<div class="mod-bd">
+					<!-- 渲染一 -->
+					<div class="category-banner" sub_module_name="edit_list">
+						<div class="cb-item">
+							<a href="/products/fc_1_13/大牌包包" module_index category_id="13" target="" data-type="1"
+								data-categoryId="13" title="大牌包包">
+								<div class="cb-img"
+									style="background-image: url(images/CgvUA1lk31GAIpF4AABP6TDC4vk178_247_239_o.gif);">
+								</div>
+								<span>大牌包包</span>
+							</a>
+						</div>
+						<div class="cb-item">
+							<a href="/products/fc_1_14/潮流服鞋" module_index category_id="14" target="" data-type="1"
+								data-categoryId="14" title="潮流服鞋">
+								<div class="cb-img"
+									style="background-image: url(images/CgvUBVlk3wuAHOWBAABGRlG4Cd4962_247_239_o.gif);">
+								</div>
+								<span>潮流服鞋</span>
+							</a>
+						</div>
+						<div class="cb-item">
+							<a href="/products/fc_1_15/美颜护肤" module_index category_id="15" target="" data-type="1"
+								data-categoryId="15" title="美颜护肤">
+								<div class="cb-img"
+									style="background-image: url(images/CgvUBVlk4Q2AbxSiAADt632ES9M636_461_486_o.gif);">
+								</div>
+								<span>美颜护肤</span>
+							</a>
+						</div>
+					</div>
+					<!--分类 center-->
+					<div class="category-product" sub_module_name="theme_list_card">
+						<div class="cp-item">
+							<div class="cp-item-hd">
+								<h3 class="title">包治百病</h3>
+							</div>
+							<div class="cp-item-bd">
+								<!-- <a module_index category_id="20" title="Tote包" href="/products/fc_1_20/Tote包" target=""
+									class="cp-product" data-type="1" data-categoryId="20">
+									<p class="cp-img"><img alt="Tote包" class="lazy"
+											src="data:image/jpeg;base64,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"
+											data-src="images/CgvUBVeawm2AaKxPAACQxTbTvJQ385_o.png"></p>
+									<p class="cp-name">Tote包</p>
+								</a> -->
+							</div>
+						</div>
+						<div class="cp-item">
+							<div class="cp-item-hd">
+								<h3 class="title">美鞋不嫌多</h3>
+							</div>
+							<div class="cp-item-bd">
+								<!-- <a module_index category_id="39" title="高跟鞋" href="/products/fc_1_39/高跟鞋" target=""
+									class="cp-product" data-type="1" data-categoryId="39">
+									<p class="cp-img"><img alt="高跟鞋" class="lazy"
+											src="data:image/jpeg;base64,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"
+											data-src="images/CgvUA1iAaF-AZfTuAABX2z6VeJM922_1_1_o.png"></p>
+									<p class="cp-name">高跟鞋</p>
+								</a> -->
+							</div>
+						</div>
+						<div class="cp-item">
+							<div class="cp-item-hd">
+								<h3 class="title">护肤要积极</h3>
+							</div>
+							<div class="cp-item-bd">
+								<!-- <a module_index category_id="50" title="卸妆洁面" href="/products/fc_1_50/卸妆洁面" target=""
+									class="cp-product" data-type="1" data-categoryId="50">
+									<p class="cp-img"><img alt="卸妆洁面" class="lazy"
+											src="data:image/jpeg;base64,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"
+											data-src="images/CgvUA1eax9OAcCuIAABSaVvPeEk096_o.png"></p>
+									<p class="cp-name">卸妆洁面</p>
+								</a> -->
+							</div>
+						</div>
+					</div>
+					<!--分类center end-->
+					<!--right -->
+					<div class="category-topic" sub_module_name="theme_hot">
+						<div class="ct-hd">
+							<h3 class="title">热门主题</h3>
+						</div>
+						<div class="ct-bd">
+						</div>
+					</div>
+					<!--right end-->
+
+					<!-- 品牌list-->
+					<div class="brand-list" id="brandList" sub_module_name="brand_list">
+						<!-- 5个轮播的第一个 -->
+						<div class="swiper-container" id="swiper1">
+							<div class="swiper-wrapper" id="swiper-wrapper">
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!-- 5个轮播的第二个 -->
+						<div class="swiper-container" id="swiper2">
+							<div class="swiper-wrapper" id="swiper-wrapper">
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!-- 5个轮播的第三个 -->
+						<div class="swiper-container" id="swiper3">
+							<div class="swiper-wrapper" id="swiper-wrapper">
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!-- 5个轮播的第四个 -->
+						<div class="swiper-container" id="swiper4">
+							<div class="swiper-wrapper" id="swiper-wrapper">
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!-- 5个轮播的第五个 -->
+						<div class="swiper-container" id="swiper5">
+							<div class="swiper-wrapper" id="swiper-wrapper">
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+					<!--品牌list end -->
+				</div>
+			</div>
+
+			<!-- 热卖地 -->
+			<div class="mod mod-hot-site" module_name="hot_area">
+				<div class="mod-hd">
+					<i class="home-icon hi-hot-site"></i><span class="title">热卖地</span>
+				</div>
+				<div class="mod-bd">
+					<div class="hot-site-list">
+						<a target=""
+							title="北美热卖品牌：Calvin Klein、Canada Goose、Clarks、Coach、Estee Lauder、Fresh、GNC、Kate Spade、NikeNine West"
+							class="site-item beimei" countrygroup_id="1" module_index>
+							<i class="home-icon hi-beimei"></i>
+						</a>
+						<a target=""
+							title="欧洲：欧洲热卖品牌：Bottega Veneta、Burberry、Fendi、Ferragamo、Furla、GUCCI、Kenzo、Lancome、Louis Vuitton、MiuMiu"
+							class="site-item ouzhou" countrygroup_id="2" module_index>
+							<i class="home-icon hi-ouzhou"></i>
+						</a>
+						<a target=""
+							title="亚洲：亚洲热卖品牌：Fancel、Hera、Innisfree、It's skin、KOBAYSHI、Laneige、Pola、Refa Carat、Shiseido、WHOO "
+							class="site-item yazhou" countrygroup_id="3" module_index>
+							<i class="home-icon hi-yazhou"></i>
+						</a>
+						<a target=""
+							title="澳新热卖品牌：Aptamil、Bioisland、CHACOE、Devondale、Goat、Healthy Care、Hydrodol、Olive oil skin care、Ozlamb UGG、Pandora"
+							class="site-item aoxin" countrygroup_id="4" module_index>
+							<i class="home-icon hi-aoxin"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!--凑热闹-->
+			<div class="mod mod-hot-seller" id="funProduct" module_name="others_buy">
+				<div class="mod-hd">
+					<i class="home-icon hi-hot-seller"></i><span class="title">凑热闹</span>
+					<a title="更多" class="more" sub_module_name="more" module_index target="">更多<i
+							class="home-icon hi-more"></i></a>
+				</div>
+				<div class="mod-bd">
+					<ul class="hot-site-list">
+
+					</ul>
+				</div>
+			</div>
+
+			<!--猜你喜欢-->
+			<div class="mod mod-like" id="guessProduct" module_name="maybe_like_list">
+				<div class="mod-hd">
+					<i class="home-icon hi-like"></i><span class="title">猜你喜欢</span>
+				</div>
+				<div class="mod-bd">
+					<ul class="product-list">
+						<!-- <li class="product-item">
+							<a sub_module_name="product_card" title="Tommy Hilfiger男士商务经典皮带旋转扣双搭腰带裤带11TL08X013" href="/product/74ef70a5-52e0-42ad-9264-67c17ea8a5be.html" module_index="" target="_blank" class="product-img">
+								<img class="lazy" alt="Tommy Hilfiger男士商务经典皮带旋转扣双搭腰带裤带11TL08X013" src="http://pic1.ymatou.com/G02/shangou/M0B/AA/75/CgvUBVqvH7uAHZJAAAI68xYaN-I476_1_1_n_w_l.jpg">	
+							</a>
+							<a href="/product/74ef70a5-52e0-42ad-9264-67c17ea8a5be.html" target="_blank" title="Tommy Hilfiger男士商务经典皮带旋转扣双搭腰带裤带11TL08X013"><p class="name lineClamp2">Tommy Hilfiger男士商务经典皮带旋转扣双搭腰带裤带11TL08X013</p></a>
+							<p class="price"><em class="unit">¥</em>249</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+
+			<!--猜你喜欢 ---------------------------------------------------end  >> -->
+			<div class="loading-more" sub_module_name="load_more" module_index module_name="maybe_like_list">点击加载更多
+
+			</div>
+			<!--刷完了-->
+			<div class="loading-end"><span class="title">刷完了</span></div>
+
+		</div>
+	</div>
+
+	<div class="wrapper footer" module_name="user_guarantee">
+		<div class="matou-server" style="padding:10px 0;height:60px">
+			<a class="matou-server-link" style="color:#fff;" target="">
+				<img
+					src="data:image/png;base64,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">
+			</a>
+		</div>
+		<div class="area">
+			<div id="bottom_list" class="bottom_list">
+				<ul class="dl">
+					<li class="dt">购物指南</li>
+					<li><a target="" rel="nofollow">注册与登录</a></li>
+					<li><a target="" rel="nofollow">账户信息维护</a></li>
+					<li><a target="" rel="nofollow">购物流程</a></li>
+					<li><a target="" rel="nofollow">会员体系</a></li>
+					<li><a target="" rel="nofollow">常见问题</a></li>
+				</ul>
+				<ul class="dl">
+					<li class="dt">订单服务</li>
+					<li><a target="" rel="nofollow">订单状态说明</a></li>
+					<li><a target="" rel="nofollow">自动取消订单</a></li>
+					<li><a target="" rel="nofollow">上传身份证</a></li>
+				</ul>
+				<ul class="dl">
+					<li class="dt">支付与配送</li>
+					<li><a target="" rel="nofollow">支付方式</a></li>
+					<li><a target="" rel="nofollow">优惠券和红包</a></li>
+					<li><a target="" rel="nofollow">如何提现</a></li>
+					<li><a target="" rel="nofollow">配送方式</a></li>
+				</ul>
+				<ul class="dl">
+					<li class="dt">售后服务</li>
+					<li><a target="">消费维权</a></li>
+					<li><a target="">纠纷处理规则</a></li>
+					<li><a target="">退货规则</a></li>
+				</ul>
+				<div class="dl last">
+					<div class="dt">官方微信</div>
+					<p>
+						<img src="images/weixin2d-new.png" class="img">
+					</p>
+					<span class="weibobox">
+						<a target="">关注微博</a>
+						<a target=""><span class="ico-weibo-png"></span></a>
+					</span>
+				</div>
+			</div>
+			<div class="matou-intro">
+				<a target="" rel="nofollow">关于码头</a>
+				<a target="" rel="nofollow">码头招聘</a>
+				<a target="">网站地图</a>
+				<a target="" rel="nofollow">所有帮助</a>
+				<a target="" rel="nofollow">海外招商中心</a>
+				<a target="" rel="nofollow">扫货买手规则</a>
+				<a target="" rel="nofollow">卖家常见问题</a>
+			</div>
+			<ul class="matou-link">
+				<a target="">55bbs我爱购物网</a>
+				<a target="">篱笆网</a>
+				<a target="">闺蜜网</a>
+				<a target="">名品导购网</a>
+				<a target="">瑞丽女性网</a>
+				<a target="">起点中文网</a>
+				<a target="">起点女生网</a>
+				<a target="">酷6网</a>
+				<a target="">太平洋返利网</a>
+				<a target="">海外折扣拼团</a>
+				<a target="">韩都衣舍</a>
+				<a target="">嘉年乐</a>
+				<a target="">为为网购商城</a>
+				<a target="">同城购物网</a>
+				<a target="">齐家网</a>
+				<a target="">网上商城</a>
+				<a target="">礼品公司</a>
+				<a target="">留学服务中心</a>
+				<a target="">礼派</a>
+				<a target="">快易拍</a>
+				<a target="">手表</a>
+				<a target="">卡当创意礼物</a>
+				<a target="">户外装备</a>
+				<a target="">母婴展</a>
+				<a target="">微财富理财</a>
+				<a target="" class="bo">更多&gt;&gt;</a>
+			</ul>
+			<div class="friendLinks">
+				<a id="___szfw_logo___" href="https://credit.szfw.org/CX20150828011121560680.html" target=""
+					class="linkitem icon-kexin" rel="nofollow"></a>
+				<span class="linkitem icon-zhifubao" title="支付宝特约商户"></span>
+				<a class="linkitem icon-wangjing" href="http://www.zx110.org/" target="" rel="nofollow"></a>
+				<a class="linkitem icon-gongshang3" href="http://scjgj.sh.gov.cn/platform/survey/step1_phone" target=""
+					rel="nofollow"></a></div>
+			<div id="copywrite" class="copywrite copyright">
+				© 2009－2019 ymatou.com, All rights reserved 增值电信业务经营许可证：沪B2-20140021
+				<!-- <font color="white">17 </font> -->
+				<br><a target="">上海洋码头网络技术有限公司 版权所有 备案号（ 沪ICP备11050082号 ）</a>
+				<br>上海市静安区江场三路93号13层
+			</div>
+			<div class="friendLinks2">
+				<a class="beian-banner" target=""><i class="beian"></i>
+					<p class="beian-txt">沪公网安备 31010802001410号</p>
+				</a>
+				<span class="split">|</span>
+				<span class="link-item">违法不良信息举报电话：021-80185223</span>
+				<span class="split">|</span>
+				<a class="link-item" target="">
+					<span class="jbzxIcon aat"></span>
+					<span>上海市互联网举报中心</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

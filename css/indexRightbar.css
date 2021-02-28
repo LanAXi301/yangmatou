@@ -1,0 +1,63 @@
+.rightbar {
+    width: 35px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #383838;
+    color: #fff;
+    z-index: 11
+}
+
+.rightbar .rightbar-inner {
+    padding: 270px 6px 0;
+    text-align: center
+}
+
+.rightbar .item {
+    border-top: 1px solid #979797;
+    padding-bottom: 18px;
+    position: relative
+}
+
+.rightbar .item .tips {
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: #c33;
+    position: absolute;
+    right: -3px;
+    top: 15px;
+    line-height: 14px
+}
+
+.rightbar .item a {
+    padding: 18px 0 7px;
+    display: block;
+    color: #fff
+}
+
+.rightbar .item a:hover {
+    color: #fff
+}
+
+.rightbar .user {
+    border-top: 0
+}
+
+.rightbar .title {
+    margin-top: 5px;
+    display: block;
+    word-break: normal;
+    word-wrap: normal
+}
+
+.rightbar-icon {
+    background-image: url(../images/bd2ccc535c6ae0f5a0aeb824b98a208f.png);
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle
+}

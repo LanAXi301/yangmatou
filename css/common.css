@@ -1,0 +1,80 @@
+@charset "utf-8";
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select,
+section,
+header,
+footer
+img,
+figure,
+figcaption
+{margin:0;padding:0;}
+body{font-size:16px;font-family: '微软雅黑';}
+ul,
+ol,
+li{list-style:none;}
+/* 标题字体为不加粗16px字 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{font-size:16px;font-weight: normal;}
+b,strong{ font-weight: normal;}
+i,em{font-style: normal;}
+li:hover a{
+    text-decoration: none;
+}
+a,u,figure{text-decoration: none;}
+
+/* 去除照片的空出间隔的bug */
+img{border:0;}
+/* 去掉输入框、按键的默认边框 */
+input,
+fieldset,
+button,
+textarea{outline: none; border:0;}
+/* 万能清除法 */
+.clear_fix:after{content:'.';
+                 clear:both;
+                 height:0;
+                 overflow:hidden;
+                 display:block;
+                 visibility: hidden;
+                }
+/* 在li的a前加实点 */
+/* ul li a::before{
+    content: " ";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background-color: rgb(144,144,144);
+    margin-right: 7px;
+    vertical-align: middle;
+} */
+body {
+    background-color: #fff;
+    font-family: Microsoft yahei, Arial;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #646464
+}

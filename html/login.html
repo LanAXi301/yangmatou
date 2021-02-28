@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>洋码头 - 登录</title>
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+    <script src="../js/gverify.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/cookie.js"></script>
+</head>
+
+<body>
+    <div class="wrapper simpletopbar" id="div_topbar_logininfo03">
+        <div class="area">
+            <div class="left">
+                <a class="logo" href="../index.html"></a>
+            </div>
+            <div class="right">
+                <span class="item">
+                    <b class="fc-gray" title="pj001"></b>
+                </span>
+                <a class="item" href="login.html">请登录</a>
+                <div class="item top-dropdown" id="QuickLogin">
+                    <div class="dropdownlist">
+                        <ul>
+                            <li><a class="txt" href="./sign.html">买家注册</a></li>
+                            <li><a class="txt">卖家注册认证</a></li>
+                        </ul>
+                    </div>
+                    <a class="droptitle" href="sign.html"><span>快速注册</span><i class="arrow"></i></a>
+                </div>
+                <div class="item top-dropdown" id="MyMatou">
+                    <div class="dropdownlist">
+                        <ul>
+                            <li><a class="txt">我的订单</a></li>
+                            <li><a class="txt">我的优惠券</a></li>
+                        </ul>
+                    </div>
+                    <a class="droptitle">
+                        <span class="myMatouText">我的码头</span><i class="arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="area">
+            <div class="div_900">
+                <div id="img_login">
+                    <a target="_blank" class="haiwaituan"></a>
+                </div>
+                <div class="input_div">
+                    <ul>
+                        <li class="gary_f1">
+                            <b>洋码头帐户登录</b>
+                            <div class="line"></div>
+                            <a href="sign.html">免费注册</a>
+                            <input type="hidden" id="hidPubKey" value=" ">
+                        </li>
+                        <li>
+                            <div id="input_login" class="input_login">
+                                <div id="input_login_bk" class="input_login_bk">
+                                    <form action="/Login/LoginResult" id="logForm" method="post" name="logForm">
+                                        <input type="hidden" value="e6e34014-c292-4352-914e-ef4acf4577a4" name="sign" id="sign">
+                                        <input type="hidden" value name="ret" id="ret">
+
+                                        <div class="div_input gary_f2" style="margin-left: 9px;">
+                                            用户名：
+                                            <input type="text" name="LoginName" id="LoginName" value class="input_style" placeholder=" 请输入用户名">
+                                        </div>
+
+                                        <div class="div_input gary_f2">密码：
+                                            <input type="password" name="PassWord" id="PassWord" class="input_style" placeholder=" 请输入密码">
+                                        </div>
+
+                                        <div class="div_input gary_f2">验证码：
+                                            <input type="text" value name="vc" id="vc" class="input_style"
+                                                style="width: 56px;" placeholder=" 验证码">
+                                            <div id="TencentCaptchaSlider"></div>
+                                            <!-- <img id="ConfirmImage" src="images/GetImgCode.png" width="52"><span>看不清？</span>
+                                            <a href="javascript:void(0);" id="changeImg" class="blue">换张图</a> -->
+                                        </div>
+
+                                        <div class="div_input">
+                                            <ul id="checkbox_login">
+                                                <li>
+                                                    <input type="checkbox" name="IsRemember" id="IsRemember" value="true">&nbsp;&nbsp;<label for="IsRemember">两周内自动登录</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="div_input" id="errorMsgOut" style="display: none; height: 40px;width: auto;">
+                                            <div class="jinggao"></div>
+                                        </div>
+
+                                        <div class="div_input">
+                                            <div id="loginDiv">
+                                                <a href="javascript:void(0);" id="loginBtn"></a>
+                                                <span class="forgetPwd"><a>忘记密码</a></span>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div id="line_line"></div>
+                                    <ul class="left_ul_li gary_f3">
+                                        <li><a class="sina_login"><i></i>微博登录</a></li>
+                                        <li>
+                                            <div class="line"></div>
+                                        </li>
+                                        <li><a id="buttonAlipayFastPayment"><i></i>支付宝帐户登录</a></li>
+                                        <li>
+                                            <a id="wxLogin"><i></i>微信登录</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="comFooter" style="margin-top: 10px; display:none;">
+        © 2009－2018 ymatou.com, All rights reserved 增值电信业务经营许可证：沪B2-20140021 <font color="white">41 </font>
+        <br>上海洋码头网络技术有限公司 版权所有
+        <br>上海市静安区江场三路93号13层
+    </div>
+    <div id="hkFooter" style="margin-top: 10px; display:none;">
+        &copy; 2014－2020 ymatou.hk 版权所有
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

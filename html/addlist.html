@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/shopGuess.js"></script>
+    <script src="../js/ajax.js"></script>
+</head>
+
+<body>
+    <script>
+        let ind = 0;
+        let timer = setInterval(function () {
+            let d = data[ind];
+            // console.log(ind);
+            console.log(d);
+            add(d);
+            ind++;
+            if (ind == 20) {
+                clearInterval(timer);
+                console.log(1);
+            }
+        }, 200)
+
+        function add(d) {
+            let id = d.id;
+            let name = d.name;
+            let deliveryName = d.deliveryName;
+            let pic = d.pic;
+            let price = d.price;
+            let sellerInfoid = d.sellerInfo.id * 1;
+            let avatarUrl = d.sellerInfo.avatarUrl;
+            let sellerInfoname = d.sellerInfo.name;
+            let countryName = d.sellerInfo.countryName;
+            let countryIconUrl = d.sellerInfo.countryIconUrl;
+            pAjax({
+                url: '../api/addlist.php',
+                data: {
+                    id: id,
+                    name: name,
+                    deliveryName: deliveryName,
+                    pic: pic,
+                    price: price,
+                    sellerInfoid: sellerInfoid,
+                    avatarUrl: avatarUrl,
+                    sellerInfoname: sellerInfoname,
+                    countryName: countryName,
+                    countryIconUrl: countryIconUrl
+                }
+            }).then((res1) => {
+                res1 = JSON.parse(res1);
+                console.log(res1);
+            })
+        }
+    </script>
+</body>
+
+</html>

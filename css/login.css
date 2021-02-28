@@ -1,0 +1,446 @@
+body {
+  background-color: #fff;
+  font: normal 12px/1.5 Microsoft yahei, Arial;
+  color: #666;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.clearfix,
+.wrapper {
+  display: block;
+}
+
+.clearfix:after,
+.wrapper:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+}
+
+.wrapper {
+  min-width: 1000px;
+  width: 100%;
+}
+
+.wrapper .area {
+  padding: 0 5px;
+  text-align: left;
+}
+
+ol,
+ul {
+  list-style: none outside;
+}
+
+ol li,
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1f7dd8;
+}
+
+.wrapper .area {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1000px;
+  min-width: 1000px;
+}
+
+.simpletopbar {
+  height: 98px;
+  border-bottom: 2px solid #c33;
+}
+
+.simpletopbar a:hover {
+  color: #1f7dd8;
+}
+
+.simpletopbar .left {
+  float: left;
+}
+
+.simpletopbar .logo {
+  width: 311px;
+  height: 73px;
+  background: url(../images/a09cf0d320e4ffc6445ae0ec42cb02f0.png);
+  display: block;
+  float: left;
+  margin: 12px 0 13px;
+}
+
+.simpletopbar .right {
+  padding-top: 40px;
+  float: right;
+  line-height: 30px;
+}
+
+.simpletopbar .item {
+  float: left;
+  padding: 0 8px;
+  color: #999;
+}
+
+.simpletopbar .top-dropdown {
+  padding: 0;
+}
+
+.top-dropdown {
+  position: relative;
+  padding: 0;
+  z-index: 110;
+  margin: 1px 8px 0;
+}
+
+.top-dropdown i,
+.top-dropdown span {
+  cursor: pointer;
+}
+
+.top-dropdown .mobiletext {
+  color: #c33;
+}
+
+.top-dropdown .droptitle {
+  border: 1px solid #fff;
+  border-bottom: 0;
+  display: block;
+  margin-top: -1px;
+  line-height: 29px;
+  color: #999;
+  /* float: left; */
+}
+
+.top-dropdown:hover {
+  margin: 1px 0 0;
+  z-index: 111;
+}
+
+.top-dropdown:hover .droptitle {
+  display: block;
+  border: 1px solid #666;
+  border-bottom: 0;
+  background-color: #fff;
+  padding: 0 8px;
+  z-index: 112;
+  position: relative;
+  top: 0;
+}
+
+.top-dropdown:hover .dropdownlist {
+  display: block;
+}
+
+.top-dropdown .icon-phone,
+.top-dropdown span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top-dropdown i {
+  display: inline-block;
+}
+
+.top-dropdown .icon-close {
+  vertical-align: middle;
+}
+
+.top-dropdown .arrow {
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  display: inline-block;
+  border-width: 3px;
+  border-style: solid dashed dashed;
+  border-color: #666 transparent transparent;
+  margin: 6px 3px 0;
+}
+
+.dropdownlist {
+  border: 1px solid #666;
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  z-index: 101;
+  top: 28px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.dropdownlist ul{
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+}
+.dropdownlist li {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px dashed #ddd;
+  padding: 5px 8px;
+  margin-bottom: -1px;
+  text-align: left;
+}
+
+.dropdownlist a {
+  color: #666;
+}
+
+.dropdownlist a:hover {
+  color: #1f7dd8;
+}
+
+.dropdownlist a.fc-red-light {
+  color: #c33;
+}
+
+#QuickLogin .dropdownlist {
+  width: 94px;
+}
+
+#QuickLogin .dropdownlist li {
+  width: 78px;
+}
+
+#StowBox .dropdownlist {
+  width: 80px;
+}
+
+#SellerServer .dropdownlist {
+  width: 100px;
+}
+
+#MyCollect .dropdownlist,
+#MyCollect li,
+#MyMatou .dropdownlist,
+#MyMatou li {
+  width: 76px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.yel {
+  color: #f04d00;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.div_900 {
+  width: 900px;
+  margin: 50px auto 0;
+  height: 450px;
+}
+
+#img_login {
+  width: 452px;
+  height: 260px;
+  margin-top: 30px;
+  float: left;
+}
+
+.input_div {
+  width: 360px;
+  float: right;
+}
+
+.input_login {
+  width: 360px;
+  border: 1px solid #ccc;
+  background-color: #efefef;
+  margin: 5px 0 1px;
+}
+
+.input_login_bk {
+  width: 350px;
+  margin: 5px;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.gary_f1 {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+.div_input {
+  height: 28px;
+  width: 300px;
+  margin: 0 auto 15px;
+}
+
+.gary_f2 {
+  font-size: 14px;
+  color: #333;
+}
+
+#TencentCaptchaSlider {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  border: 0;
+  width: 80px;
+}
+
+.gary_f3 {
+  font-size: 12px;
+  color: #666;
+}
+
+.input_style {
+  width: 200px;
+  height: 26px;
+  border: 1px solid #dadada;
+  border-top: 1px solid #bababa;
+}
+
+a:hover {
+  color: #f04e00;
+}
+
+.blue {
+  color: #1f7dd8;
+}
+
+#checkbox_login li {
+  float: left;
+  margin-left: 68px;
+}
+
+.left_ul_li {
+  width: 300px;
+  height: 28px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left_ul_li li {
+  margin-right: 6px;
+  height: 18px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+#line_line {
+  margin: 0 auto 15px;
+  font-size: 0;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #fff;
+  width: 280px;
+}
+
+.sina_login {
+  display: inline-block;
+  width: 80px;
+}
+
+.sina_login i {
+  width: 20px;
+  background-image: url(../images/d50e308ab6557dead5473e95d8901975.png);
+  background-repeat: no-repeat;
+  background-position: -86px -235px;
+  height: 20px;
+  float: left;
+}
+
+.haiwaituan {
+  width: 452px;
+  height: 260px;
+  background: url(../images/5aebbf5a6893bd825441a68a60b42b51.jpg);
+  display: block;
+}
+
+.line {
+  border-left: 1px solid #ccc;
+  width: 1px;
+  height: 13px;
+  vertical-align: middle;
+}
+
+#loginBtn,
+.line {
+  display: inline-block;
+}
+
+#loginBtn {
+  width: 67px;
+  height: 30px;
+  background: url(../images/0c514d7e61b7db90f0798895c10e05a9.png);
+  cursor: pointer;
+}
+
+.forgetPwd {
+  margin-left: 20px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#buttonAlipayFastPayment i {
+  width: 20px;
+  height: 16px;
+  background: url(../images/d50e308ab6557dead5473e95d8901975.png) -62px -235px;
+  background-repeat: no-repeat;
+}
+
+#buttonAlipayFastPayment i,
+#wxLogin i {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#wxLogin i {
+  width: 23px;
+  height: 20px;
+  background: url(../images/bfdb5897258b551e046ea2fbc433c70b.png);
+  background-repeat: no-repeat;
+}
+
+#IsRemember {
+  vertical-align: middle;
+}
+
+.jinggao {
+  height: 26px;
+  background-color: #f04e00;
+  font-size: 12px;
+  color: #fff;
+  line-height: 26px;
+  padding-left: 7px;
+  width: 200px;
+  margin-left: 68px;
+}
+
+#loginDiv {
+  text-align: left;
+  margin-left: 68px;
+}
